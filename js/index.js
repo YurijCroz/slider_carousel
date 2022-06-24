@@ -48,5 +48,4 @@ previous.addEventListener('click', ()=> {
 //let timer = 4000;
 //setInterval(nextFun, timer);   //цикличный таймер авто прокрутки =)
 
-let imgBG = document.querySelector('div.full-size img').getAttribute('src');
-body.style.backgroundImage = `url(${imgBG})`;
+backgroundImageReplacement()
