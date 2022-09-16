@@ -9,14 +9,14 @@ const previous = document.querySelector('div.previous');
 function nextFun() {
     let current = document.querySelector('div.min-size.full-size');  //находим элемент у кого сейчас full-size
     let nextEl = current.nextElementSibling;  //находим кто следующий по списку от full-size
-    eventCheck(current, nextEl) //отправляем на проверку
-}
+    eventCheck(current, nextEl); //отправляем на проверку
+};
 
 function previousFun() {
     let current = document.querySelector('div.min-size.full-size');  //находим элемент у кого сейчас full-size
     let previousEl = current.previousElementSibling;  //находим кто предыдущий по списку от full-size
-    eventCheck(current, previousEl) //отправляем на проверку
-}
+    eventCheck(current, previousEl); //отправляем на проверку
+};
 
 function eventCheck(current, element) {
     if(element!==null){                        //проверка на то что следующий(или предыдущий) есть
@@ -32,7 +32,7 @@ function eventCheck(current, element) {
             resizeEl(current, previousEl[previousEl.length-1]); //вызов функции по смене full-size
         };
     };
-}
+};
 
 function resizeEl(current, element) {
     current.classList.remove('full-size'); //удаляем у текущего full-size
@@ -52,9 +52,9 @@ previous.addEventListener('click', previousFun);
 document.addEventListener('keyup', function(event){  //перелистывание стрелками клавиатуры
     if(event.code==='ArrowRight') nextFun();
     if(event.code==='ArrowLeft') previousFun();
-})
+});
 
 //let timer = 4000;
 //setInterval(nextFun, timer);   //цикличный таймер авто прокрутки =)
 
-backgroundImageReplacement()
+backgroundImageReplacement();
